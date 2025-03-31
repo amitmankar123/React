@@ -7,4 +7,7 @@ function App() {
   )
 }
 
-export default App
+function Good (){
+  return(  <h1>for swad of testing</h1>)
+  }
+export default Good
