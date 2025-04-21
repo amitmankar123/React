@@ -22,11 +22,11 @@ function App() {
   }
    
  useEffect(()=>{
-  JSON.parse(localStorage.getItem ("todos"))
-  if(todos && todos.length>0){
-      setTodos(todos)
+   const savedTodos  = JSON.parse(localStorage.getItem ("todos"))
+  if(savedTodos && savedTodos.length>0){
+      setTodos(savedTodos )
   }
- })
+ },[])
 
  useEffect(()=>{
   localStorage.setItem("todos", JSON.stringify(todos))
